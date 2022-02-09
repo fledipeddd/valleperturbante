@@ -17,8 +17,8 @@ body {
 a.title {
 	position: fixed;
 	z-index: 3;
-	font-size: 11pt;
-	line-height: 13pt;
+	font-size: 13pt;
+	line-height: 16pt;
 	position: absolute;
 	padding-left: 30px;
 	width: 100%;
@@ -31,8 +31,8 @@ a:hover {
 
 a#play {
 	z-index: 5;
-	font-size: 11pt;
-	line-height: 13pt;
+	font-size: 13pt;
+	line-height: 16pt;
 	position: fixed;
 	right: 30px;
 	background: none;
@@ -52,8 +52,8 @@ a#play {
 #abstract {
 	z-index: 2;
 	position: fixed;
-	font-size: 11pt;
-	line-height: 13pt;
+	font-size: 13pt;
+	line-height: 16pt;
 	padding: 60px 2px 2px;
 	width: 35%;
 	display: none;
@@ -102,6 +102,7 @@ a#play {
 }
 
 @media all and (max-width: 700px) {
+
 	a.title {
 		font-size: 9pt;
 		line-height: 12pt;
@@ -135,5 +136,6 @@ a#play {
 
 	.nm:hover {
 		background: white;
-	}
+}
+
 }
