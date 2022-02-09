@@ -1,0 +1,121 @@
+* {
+	margin: 0;
+	top: 0;
+	background: rgb(255, 0, 60);
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 13pt;
+	line-height: 15pt;
+}
+
+::selection {
+	background: none;
+}
+
+body {
+	overflow: hidden;
+}
+
+a.title {
+	z-index: 3;
+	position: absolute;
+	padding-left: 30px;
+	width: 100%;
+}
+
+a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+a#play {
+	z-index: 5;
+	position: fixed;
+	right: 30px;
+	background: none;
+}
+
+.img img{
+	z-index: 1;
+	position: fixed;
+	top: 32px;
+	left: 0px;
+	bottom: 0px;
+	width: 100vw;
+	height: 100%;
+	object-fit: cover;
+}
+
+#abstract {
+	z-index: 2;
+	position: fixed;
+	padding: 50px 2px 2px;
+	width: 35%;
+	display: none;
+}
+
+[id^='nota'] {
+	text-decoration: underline;
+	font-family: serif;
+	font-weight: normal;
+	font-size: 11pt;
+	line-height: 10pt;
+	background: white;
+	display: none;
+}
+
+.nm {
+	background: white;
+}
+
+.nm:hover {
+	cursor: pointer;
+	background: black;
+}
+
+.italico {
+	font-family: serif;
+	font-weight: normal;
+	font-size: 11pt;
+	line-height: 10pt;
+	background: white;
+	font-style: italic;
+}
+
+.italicoSans {
+	font-style: italic;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media all and (max-width: 1400px) {
+	#abstract {
+		width: 50%;
+	}
+}
+
+@media all and (max-width: 700px) {
+	* {
+		font-size: 9pt;
+		line-height: 12pt;
+	}
+
+	#abstract {
+		width: 100%;
+	}
+	 
+	.img img {
+		top: 28px;
+	}
+
+	[id^='nota'] {
+		font-size: 7pt;
+	}
+
+	.italico {
+		font-size: 7pt;
+		line-height: 11pt;
+	}
+}

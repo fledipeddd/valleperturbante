@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>la valle perturbante</title>
+</head>
+
+<body>
+	<audio id="myAudio" loop src="data/ambient.mov" preload="auto"></audio>
+	<a id="play" onclick="togglePlay()">sound off</a>
+
+	<a class="title" onclick="toggleMenu()">la valle perturbante<br>la macchina durante il suo puro processare</a>
+
+	<p id="abstract">I soggetti di questo lavoro sono gli elementi che costruiscono il mondo di un videogioco, questi ultimi sono ai margini dell&rsquo;esperienza di gioco, non essendo in nessun modo utilizzabili nel gameplay. La loro unica funzione &egrave; quella di aumentare il grado di illusoriet&agrave; della simulazione rendendola sempre pi&ugrave; autonoma. Sono oggetti puramente estetici, nella misura in cui possono solo <span class="italicoSans">essere-guardati</span>, dunque se ne esperisce l&rsquo;essenza solo nel <span class="italicoSans">non-giocare</span>, dove &ldquo;l&rsquo;operatore sta di fatto avvicinando la sua esperienza ai ritmi reali della macchina&rdquo;<span class="nm" onclick="toggleNotaUno()">1</span><span id="notauno">.Alexander Galloway, <span class="italico">Gaming. Essays on Algorithmic Culture</span>, University of Minnesota Press, 2006</span> un ritmo perturbante e fuori dal tempo.
+	
+	<br><br>
+	Queste immagini, come il ready-made duchampiano, evocano un&rsquo;assenza attraverso la presenza.<span class="nm" onclick="toggleNotaDue()">2</span><span id="notadue">.Franco Vaccari, <span class="italico">Fotografia e inconscio tecnologico</span>, Einaudi, 2019</span> Mettendo in atto una rivoluzione dello statuto <span class="italicoSans">indicale</span> dell&rsquo;immagine: l&rsquo;immagine non &egrave; pi&ugrave; una presenza condannata ad una insistente referenzialit&agrave;, ma &egrave; il referente stesso, al contempo realt&agrave; e immagine.
+	
+	<br><br>
+	&ldquo;Se il passare del tempo significa qualcosa, allora il gioco non &egrave; in uno stato <span class="italicoSans">ambientale</span>. Piove. Il sole tramonta e poi sorge. Gli alberi si agitano. Questi atti sono un tipo di <span class="italicoSans">happening</span> perpetuo, un <span class="italicoSans">tableau-vivant</span>. Gli atti ambientali sono distinguibili da una pausa del gioco attraverso l'esistenza di micromovimenti &mdash; proprio come i piccoli movimenti visibili descritti da Deleuze come l&rsquo;<span class="italicoSans">immagine-affezione</span>. Essi segnalano che il gioco &egrave; ancora in corso, ma che nessun gioco sta effettivamente accadendo in quel momento.&ldquo;<span class="nm" onclick="toggleNotaTre()">3</span><span id="notatre">.Alexander Galloway, <span class="italico">Gaming. Essays on Algorithmic Culture</span>, University of Minnesota Press, 2006</span>
+	
+	<br><br>
+	L&rsquo;<span class="italicoSans">affetto</span> &egrave; una serie di micro-movimenti su una lastra nervosa immobilizzata, come un volto &ldquo;che raccoglie o esprime apertamente ogni sorta di micro-movimenti locali che il resto del corpo in genere tiene nascosti.&rdquo;<span class="nm" onclick="toggleNotaQuat()">4</span><span id="notaquat">.Gilles Deleuze, <span class="italico">L'immagine-movimento. Cinema 1</span>, Einaudi, 2016</span> Questi oggetti di scena sono <span class="italicoSans">voltificati</span>, ci guardano anche se non somigliano a un volto, da questo sguardo nasce una tensione, che tende unicamente verso un parossismo, chiusa in se stessa, senza vie di sbocco, con un&rsquo;unica potenzialit&agrave;: l&rsquo;<span class="italicoSans">affetto</span> stesso.
+	</p>
+
+	<div onclick="change()" class="img"> 
+		<img id="gif1" src="data/vp-03.gif">
+	</div>
+</body>
+
+<script type="text/javascript">
+	// finestra abstract
+	function toggleMenu() {
+	var boxTesto = document.getElementById('abstract');
+		if (boxTesto.style.display == "block") {
+			boxTesto.style.display = "none";
+		} else {
+			boxTesto.style.display = "block";
+		}
+	}
+
+	// note
+	function toggleNotaUno() {
+	var notaUno = document.getElementById('notauno');
+		if (notaUno.style.display == "inline") {
+			notaUno.style.display = "none";
+		} else {
+			notaUno.style.display = "inline";
+		}
+	}
+	function toggleNotaDue() {
+	var notaDue = document.getElementById('notadue');
+		if (notaDue.style.display == "inline") {
+			notaDue.style.display = "none";
+		} else {
+			notaDue.style.display = "inline";
+		}
+	}
+	function toggleNotaTre() {
+	var notaTre = document.getElementById('notatre');
+		if (notaTre.style.display == "inline") {
+			notaTre.style.display = "none";
+		} else {
+			notaTre.style.display = "inline";
+		}
+	}
+	function toggleNotaQuat() {
+	var notaTre = document.getElementById('notaquat');
+		if (notaquat.style.display == "inline") {
+			notaquat.style.display = "none";
+		} else {
+			notaquat.style.display = "inline";
+		}
+	}
+
+	// cambio gif
+	g = 1;
+	var imgArr = ["data/vp-03.gif", "data/vp-01.gif", "data/vp-02.gif", "data/vp-04.gif"];
+	function change() {
+		var gif1 = document.getElementById("gif1");
+		gif1.src = imgArr[g];
+		if (g == 3) {
+			g = 0;
+		} else {
+			g++;
+		}
+	}
+
+	// audio on/of
+	var myAudio = document.getElementById("myAudio");
+	var text = document.getElementById("play");
+	var isPlaying = false;
+	function togglePlay() {
+		isPlaying ? myAudio.pause() : myAudio.play();
+	};
+
+	myAudio.onplaying = function() {
+		isPlaying = true;
+		text.innerHTML = "sound on";
+	};
+	
+	myAudio.onpause = function() {
+		isPlaying = false;
+		text.innerHTML = "sound off";
+	}
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
