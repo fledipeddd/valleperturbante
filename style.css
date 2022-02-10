@@ -95,13 +95,7 @@ a#play {
     display: none;
 }
 
-@media all and (max-width: 1400px) {
-	#abstract {
-		width: 50%;
-	}
-}
-
-@media all and (max-width: 700px) {
+@media screen and (max-width: 700px) {
 
 	a.title {
 		font-size: 9pt;
@@ -112,12 +106,15 @@ a#play {
 		font-size: 9pt;
 		line-height: 12pt;
 	}
+	
+	a:hover {
+		text-decoration: none;
+	}
 
 	#abstract {
 		font-size: 9pt;
 		line-height: 12pt;
 		width: 100%;
-		overflow-y: scroll;
 	}
 	 
 	.img img {
@@ -138,4 +135,10 @@ a#play {
 		background: white;
 }
 
+}
+
+@media screen and (max-width: 1400px) {
+	#abstract {
+		width: 50%;
+	}
 }
