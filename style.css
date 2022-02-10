@@ -16,7 +16,7 @@ body {
 	line-height: 16pt;
 }
 
-a#play {
+#play {
 	z-index: 4;
 	position: fixed;
 	right: 30px;
@@ -104,7 +104,7 @@ a:hover {
 		line-height: 8pt;
 	}
 	
-	a#play {
+	#play {
 		position: absolute;
 		left: 0px;
 		bottom: 0px;
