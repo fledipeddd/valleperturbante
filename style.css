@@ -100,7 +100,7 @@ a#play {
 @media screen and (max-width: 700px) {
 	body {
 		font-size: 6pt;
-		line-height: 8pt;
+		line-height: 7pt;
 	}
 
 	a:hover {
@@ -108,7 +108,6 @@ a#play {
 	}
 
 	a#play {
-		font-size: 20pt;
 		position: absolute;
 		left: 0px;
 		bottom: 0px;
@@ -131,12 +130,12 @@ a#play {
 
 	[id^='nota'] {
 		font-size: 9pt;
-		line-height: 6pt;
+		line-height: 3pt;
 	}
 
 	.italico {
 		font-size: 9pt;
-		line-height: 6pt;
+		line-height: 3pt;
 	}
 
 	.nm:hover {
