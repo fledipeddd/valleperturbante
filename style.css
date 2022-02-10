@@ -97,10 +97,14 @@ a#play {
 	}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 	body {
 		font-size: 6pt;
-		line-height: 7pt;
+		line-height: 8pt;
+	}
+	
+	a {
+		font-size: 6pt;
 	}
 
 	a:hover {
