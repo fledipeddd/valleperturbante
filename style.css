@@ -30,7 +30,7 @@ a:hover {
 }
 
 a#play {
-	z-index: 5;
+	z-index: 3;
 	position: fixed;
 	right: 30px;
 	background: none;
@@ -85,6 +85,7 @@ a#play {
 
 .italicoSans {
 	font-style: italic;
+	background: none;
 }
 
 ::-webkit-scrollbar {
