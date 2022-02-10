@@ -16,6 +16,13 @@ body {
 	line-height: 16pt;
 }
 
+a#play {
+	z-index: 4;
+	position: fixed;
+	right: 30px;
+	background: none;
+}
+
 a.title {
 	position: fixed;
 	z-index: 3;
@@ -27,13 +34,6 @@ a.title {
 a:hover {
 	text-decoration: underline;
 	cursor: pointer;
-}
-
-a#play {
-	z-index: 3;
-	position: fixed;
-	right: 30px;
-	background: none;
 }
 
 .img img{
@@ -104,14 +104,6 @@ a#play {
 		line-height: 8pt;
 	}
 	
-	a {
-		font-size: 6pt;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
 	a#play {
 		position: absolute;
 		left: 0px;
@@ -120,6 +112,10 @@ a#play {
 		width: 100%;
 		padding-left: 30px;
 		background: rgb(255, 0, 60);
+	}
+
+	a:hover {
+		text-decoration: none;
 	}
 
 	#abstract {
