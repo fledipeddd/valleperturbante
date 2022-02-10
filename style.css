@@ -104,8 +104,8 @@ a#play {
 @media screen and (max-width: 700px) {
 
 	a.title {
-		font-size: 9pt;
-		line-height: 12pt;
+		font-size: 7pt;
+		line-height: 10pt;
 	}
 
 	a#play {
